@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/widgets/navbar.dart';
+import 'package:personal_portfolio/widgets/top_container.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,6 +17,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: const [
           NavBar(),
+          TopContainer(),
         ],
       ),
     );
