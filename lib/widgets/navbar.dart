@@ -12,7 +12,7 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(70, 20, 70, 20),
+      padding: const EdgeInsets.fromLTRB(120, 30, 100, 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
