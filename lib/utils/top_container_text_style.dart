@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
+//========= for main tetx ================
 class MainText {
   static TextStyle mainText() {
     return GoogleFonts.alegreya(
@@ -12,6 +13,8 @@ class MainText {
     );
   }
 }
+
+//============ for subheading text =====================
 
 class SubText {
   static TextStyle subText() {
@@ -24,6 +27,7 @@ class SubText {
   }
 }
 
+//=============== for normal text near animation ===========
 class NormalSubTetx {
   static TextStyle normalSubTetx() {
     return GoogleFonts.poppins(
@@ -34,6 +38,7 @@ class NormalSubTetx {
   }
 }
 
+//=============for animation text ====================
 class DiffText {
   static TextStyle diffText() {
     return GoogleFonts.poppins(
@@ -51,28 +56,30 @@ class DiffText {
   }
 }
 
+//============= for animated text of package =============
+
 class ChangableText {
   static AnimatedTextKit changableText(String text1, text2, text3, text4) {
     return AnimatedTextKit(
       animatedTexts: [
         TypewriterAnimatedText(
           text1,
-          speed: const Duration(milliseconds: 80),
+          speed: const Duration(milliseconds: 100),
           textStyle: DiffText.diffText(),
         ),
         TypewriterAnimatedText(
           text2,
-          speed: const Duration(milliseconds: 80),
+          speed: const Duration(milliseconds: 100),
           textStyle: DiffText.diffText(),
         ),
         TypewriterAnimatedText(
           text3,
-          speed: const Duration(milliseconds: 80),
+          speed: const Duration(milliseconds: 100),
           textStyle: DiffText.diffText(),
         ),
         TypewriterAnimatedText(
           text4,
-          speed: const Duration(milliseconds: 80),
+          speed: const Duration(milliseconds: 100),
           textStyle: DiffText.diffText(),
         ),
       ],

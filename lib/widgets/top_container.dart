@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/constants/icons.dart';
 import 'package:personal_portfolio/utils/top_container_text_style.dart';
+import 'package:personal_portfolio/widgets/circle_avatar_icon.dart';
 
 class TopContainer extends StatefulWidget {
   const TopContainer({super.key});
@@ -16,35 +18,51 @@ class _TopContainerState extends State<TopContainer> {
       child: Row(
         children: [
           Padding(
-              padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Hello it's me",
-                    style: MainText.mainText(),
-                  ),
-                  Text(
+            padding: const EdgeInsets.fromLTRB(170, 0, 0, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Hello it's me",
+                  style: MainText.mainText(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                  child: Text(
                     "Sagar Paudel",
                     style: SubText.subText(),
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "And i'm a ",
-                        style: NormalSubTetx.normalSubTetx(),
-                      ),
-                      ChangableText.changableText(
-                        "Flutter Developer",
-                        "Figma to App Converter",
-                        "Freelancer",
-                        "BCA Student",
-                      ),
-                    ],
-                  )
-                ],
-              ))
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "And i'm a ",
+                      style: NormalSubTetx.normalSubTetx(),
+                    ),
+                    ChangableText.changableText(
+                      "Flutter Developer",
+                      "Figma to App Converter",
+                      "Freelancer",
+                      "BCA Student",
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CircleIcon.circleIcon(
+                        PngIcons.github, const Color(0xFF01EEFF), 40),
+                    CircleIcon.circleIcon(
+                        PngIcons.facebook, const Color(0xFF01EEFF), 30),
+                    CircleIcon.circleIcon(
+                        PngIcons.insta, const Color(0xFF01EEFF), 30),
+                    CircleIcon.circleIcon(
+                        PngIcons.linkedin, const Color(0xFF01EEFF), 30),
+                  ],
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
