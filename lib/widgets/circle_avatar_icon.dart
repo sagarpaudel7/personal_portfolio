@@ -3,20 +3,31 @@ import 'package:flutter/material.dart';
 //============ for PNG icons ================
 
 class CircleIcon {
-  static circleIcon(String assetImage, Color color, double width) {
+  static circleIcon(String assetImage, Color color) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 20, 15, 0),
-      child: CircleAvatar(
-        backgroundColor: const Color(0xFF01EEFF),
-        radius: 25,
-        child: CircleAvatar(
-          backgroundColor: const Color(0xFF040914),
-          radius: 22,
-          child: Image.asset(
-            assetImage,
-            color: color,
-            width: width,
-            fit: BoxFit.cover,
+      padding: const EdgeInsets.fromLTRB(0, 25, 15, 0),
+      child: Ink(
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: const Color(0xFF01EEFF),
+            width: 4,
+          ),
+          borderRadius: BorderRadius.circular(100),
+        ),
+        child: InkWell(
+          onTap: () {},
+          borderRadius: BorderRadius.circular(50),
+          hoverColor: Colors.deepOrange,
+          splashColor: const Color(0xFF040914),
+          child: Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Image.asset(
+              assetImage,
+              color: color,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),

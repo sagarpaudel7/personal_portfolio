@@ -51,14 +51,40 @@ class _TopContainerState extends State<TopContainer> {
                 Row(
                   children: [
                     CircleIcon.circleIcon(
-                        PngIcons.github, const Color(0xFF01EEFF), 40),
+                        PngIcons.github, const Color(0xFF01EEFF)),
                     CircleIcon.circleIcon(
-                        PngIcons.facebook, const Color(0xFF01EEFF), 30),
+                        PngIcons.facebook, const Color(0xFF01EEFF)),
                     CircleIcon.circleIcon(
-                        PngIcons.insta, const Color(0xFF01EEFF), 30),
+                        PngIcons.insta, const Color(0xFF01EEFF)),
                     CircleIcon.circleIcon(
-                        PngIcons.linkedin, const Color(0xFF01EEFF), 30),
+                        PngIcons.linkedin, const Color(0xFF01EEFF)),
                   ],
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                MaterialButton(
+                  onPressed: () {},
+                  height: 40,
+                  minWidth: 100,
+                  color: const Color(0xFF00EEFF),
+                  hoverColor: Colors.deepOrange,
+                  elevation: 5,
+                  splashColor: const Color(0xFF040914),
+                  focusElevation: 10,
+                  focusColor: Colors.white,
+                  shape: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: const Text(
+                    " Download CV",
+                    style: TextStyle(
+                      color: Color(0xFFffffff),
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 )
               ],
             ),
