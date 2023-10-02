@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/constants/icons.dart';
-import 'package:personal_portfolio/constants/images.dart';
 import 'package:personal_portfolio/utils/top_container_text_style.dart';
+import 'package:personal_portfolio/widgets/button.dart';
 import 'package:personal_portfolio/widgets/circle_avatar_icon.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:personal_portfolio/widgets/profile_circle.dart';
 
 class TopContainer extends StatefulWidget {
   const TopContainer({super.key});
@@ -16,7 +17,7 @@ class _TopContainerState extends State<TopContainer> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 500,
+      height: 600,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,11 +50,11 @@ class _TopContainerState extends State<TopContainer> {
                   child: Row(
                     children: [
                       Text(
-                        "And i'm a ",
+                        "and i'm a ",
                         style: NormalSubTetx.normalSubTetx(),
                       ),
                       ChangableText.changableText(
-                        "Flutter Developer",
+                        "Flutter App Developer",
                         "Figma to App Converter",
                         "Freelancer",
                         "BCA Student",
@@ -61,6 +62,7 @@ class _TopContainerState extends State<TopContainer> {
                     ],
                   ),
                 ),
+                //======== for circle icons ==================
                 FadeInLeft(
                   delay: const Duration(milliseconds: 300),
                   child: Row(
@@ -79,46 +81,18 @@ class _TopContainerState extends State<TopContainer> {
                 const SizedBox(
                   height: 40,
                 ),
+
+                //========= for cv button ===============
                 FadeInUp(
                   delay: const Duration(milliseconds: 300),
-                  child: MaterialButton(
-                    onPressed: () {},
-                    height: 40,
-                    minWidth: 100,
-                    color: const Color(0xFF00EEFF),
-                    hoverColor: Colors.deepOrange,
-                    elevation: 5,
-                    splashColor: const Color(0xFF040914),
-                    focusElevation: 10,
-                    focusColor: Colors.white,
-                    shape: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: const Text(
-                      " Download CV",
-                      style: TextStyle(
-                        color: Color(0xFFffffff),
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
+                  child: MainButton.mainButton(),
                 )
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 50, 200, 0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(500),
-              child: Image.asset(
-                ProfileImage.profileImage,
-                height: 350,
-                width: 350,
-              ),
-            ),
-          )
+
+          //======= for profile image ===========
+          ProfileCircle.profileCircle(),
         ],
       ),
     );
