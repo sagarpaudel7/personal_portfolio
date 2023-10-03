@@ -65,20 +65,17 @@ class _TopContainerState extends State<TopContainer> {
                   ),
                 ),
                 //======== for circle icons ==================
-                FadeInLeft(
-                  delay: const Duration(milliseconds: 300),
-                  child: Row(
-                    children: [
-                      CircleIcon.circleIcon(
-                          PngIcons.github, const Color(0xFF01EEFF)),
-                      CircleIcon.circleIcon(
-                          PngIcons.facebook, const Color(0xFF01EEFF)),
-                      CircleIcon.circleIcon(
-                          PngIcons.insta, const Color(0xFF01EEFF)),
-                      CircleIcon.circleIcon(
-                          PngIcons.linkedin, const Color(0xFF01EEFF)),
-                    ],
-                  ),
+                Row(
+                  children: [
+                    CircleIcon.circleIcon(
+                        PngIcons.github, const Color(0xFF01EEFF)),
+                    CircleIcon.circleIcon(
+                        PngIcons.facebook, const Color(0xFF01EEFF)),
+                    CircleIcon.circleIcon(
+                        PngIcons.insta, const Color(0xFF01EEFF)),
+                    CircleIcon.circleIcon(
+                        PngIcons.linkedin, const Color(0xFF01EEFF)),
+                  ],
                 ),
                 const SizedBox(
                   height: 40,

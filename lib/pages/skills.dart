@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_portfolio/constants/images.dart';
@@ -28,8 +29,10 @@ class _SkillsPageState extends State<SkillsPage> {
     "Git",
     "Firebase",
     "Rest API",
-    "Database"
+    "SQF lite"
   ];
+
+  bool isHover = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -58,37 +61,49 @@ class _SkillsPageState extends State<SkillsPage> {
               ),
               itemCount: svgImageList.length,
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xFf0a0e21),
-                      shape: BoxShape.rectangle,
-                      border: Border.all(width: 1, color: Colors.white),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          svgImageList[index],
-                          color: Colors.white,
-                          width: 100,
-                          height: 100,
-                          //   color: Colors.amber,
-                          fit: BoxFit.cover,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                          child: Text(
-                            svgImageName[index],
-                            style: GoogleFonts.alegreya(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
+                return InkWell(
+                  onTap: () {},
+                  onHover: (value) {
+                    isHover = value;
+                    setState(() {});
+                  },
+                  borderRadius: BorderRadius.circular(30),
+                  child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xFf0a0e21),
+                        shape: BoxShape.rectangle,
+                        border: Border.all(
+                            width: 1.5,
+                            color: isHover
+                                ? const Color(0xFF01EEFF)
+                                : Colors.white),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            svgImageList[index],
+                            color: Colors.white,
+                            width: 100,
+                            height: 100,
+                            //   color: Colors.amber,
+                            fit: BoxFit.cover,
                           ),
-                        )
-                      ],
-                    ));
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            child: Text(
+                              svgImageName[index],
+                              style: GoogleFonts.alegreya(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          )
+                        ],
+                      )),
+                );
               },
             ),
           ),
