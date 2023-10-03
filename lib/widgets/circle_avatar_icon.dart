@@ -12,7 +12,7 @@ class CircleIcon {
         decoration: BoxDecoration(
           border: Border.all(
             color: const Color(0xFF01EEFF),
-            width: 4,
+            width: 2.5,
           ),
           borderRadius: BorderRadius.circular(100),
         ),

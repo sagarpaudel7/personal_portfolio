@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ProfileCircle {
   static profileCircle() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 130, 0),
+      padding: const EdgeInsets.fromLTRB(0, 30, 130, 0),
       child: ZoomIn(
         delay: const Duration(milliseconds: 500),
         child: Ink(

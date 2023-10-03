@@ -17,16 +17,18 @@ class _TopContainerState extends State<TopContainer> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 600,
+      height: MediaQuery.of(context).size.height, //600,
+
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(170, 0, 0, 0),
+            padding: EdgeInsets.fromLTRB(
+                170, MediaQuery.of(context).size.height * .20, 0, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 FadeInDown(
                   delay: const Duration(milliseconds: 300),
