@@ -1,6 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 //=========== for profile image ==============
 class ProfileImage {
   static String profileImage = "assets/images/profile.png";

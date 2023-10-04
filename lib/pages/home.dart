@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/pages/projects.dart';
 import 'package:personal_portfolio/pages/skills.dart';
 import 'package:personal_portfolio/widgets/navbar.dart';
 import 'package:personal_portfolio/widgets/top_container.dart';
@@ -22,6 +23,7 @@ class _HomePageState extends State<HomePage> {
               NavBar(),
               TopContainer(),
               SkillsPage(),
+              Projects(),
             ],
           ),
         ),

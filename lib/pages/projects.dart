@@ -1,36 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:personal_portfolio/constants/images.dart';
 import 'package:personal_portfolio/utils/heading_text_style.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class SkillsPage extends StatefulWidget {
-  const SkillsPage({super.key});
+class Projects extends StatefulWidget {
+  const Projects({super.key});
 
   @override
-  State<SkillsPage> createState() => _SkillsPageState();
+  State<Projects> createState() => _ProjectsState();
 }
 
-class _SkillsPageState extends State<SkillsPage> {
-  List svgImageList = [
-    SvgImages.flutter,
-    SvgImages.dart,
-    SvgImages.github,
-    SvgImages.git,
-    SvgImages.firebase,
-    SvgImages.api,
-    SvgImages.database,
-  ];
-  List svgImageName = [
-    "Flutter",
-    "Dart",
-    "GitHub",
-    "Git",
-    "Firebase",
-    "Rest API",
-    "SQF lite"
-  ];
-
+class _ProjectsState extends State<Projects> {
   bool isHover = false;
   @override
   Widget build(BuildContext context) {
@@ -42,23 +21,23 @@ class _SkillsPageState extends State<SkillsPage> {
       child: Column(
         children: [
           Text(
-            "Skills",
+            "Projects",
             style: HeadingText.headingTextStyle(),
           ),
           const SizedBox(
             height: 25,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height * 1.8,
             child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 220,
+                maxCrossAxisExtent: 600,
                 childAspectRatio: 1.0,
                 mainAxisSpacing: 50,
                 crossAxisSpacing: 50,
               ),
-              itemCount: svgImageList.length,
+              itemCount: 4,
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(
                   onTap: () {},
@@ -81,18 +60,18 @@ class _SkillsPageState extends State<SkillsPage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SvgPicture.asset(
-                            svgImageList[index],
-                            color: Colors.white,
-                            width: 100,
-                            height: 100,
-                            //   color: Colors.amber,
-                            fit: BoxFit.cover,
+                          Container(
+                            height: 400,
+                            width: 400,
+                            decoration: BoxDecoration(
+                              color: Colors.deepOrange,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                             child: Text(
-                              svgImageName[index],
+                              "This is my project ${index + 1}",
                               style: GoogleFonts.alegreya(
                                 color: Colors.white,
                                 fontSize: 20,
