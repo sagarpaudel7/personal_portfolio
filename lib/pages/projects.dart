@@ -16,7 +16,6 @@ class _ProjectsState extends State<Projects> {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 120,
-        vertical: 30,
       ),
       child: Column(
         children: [
@@ -25,7 +24,7 @@ class _ProjectsState extends State<Projects> {
             style: HeadingText.headingTextStyle(),
           ),
           const SizedBox(
-            height: 25,
+            height: 40,
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 1.8,

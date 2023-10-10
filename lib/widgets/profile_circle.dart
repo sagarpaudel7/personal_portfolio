@@ -27,7 +27,7 @@ class ProfileCircle {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: Colors.blueAccent,
+                    color: const Color(0xFF3F00FF),
                     width: 2.0,
                   ),
                   color: Colors.transparent,

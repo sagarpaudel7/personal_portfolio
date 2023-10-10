@@ -17,7 +17,8 @@ class _TopContainerState extends State<TopContainer> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height, //600,
+      height: 650,
+      //  height: MediaQuery.of(context).size.height, //600,
 
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

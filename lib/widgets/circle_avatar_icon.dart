@@ -17,7 +17,7 @@ class CircleIcon {
               color: const Color(0xFF01EEFF),
               width: 2.5,
             ),
-            borderRadius: BorderRadius.circular(100),
+            borderRadius: BorderRadius.circular(50),
           ),
           child: InkWell(
             onTap: () {},

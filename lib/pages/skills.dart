@@ -12,26 +12,43 @@ class SkillsPage extends StatefulWidget {
 }
 
 class _SkillsPageState extends State<SkillsPage> {
-  List svgImageList = [
-    SvgImages.flutter,
-    SvgImages.dart,
-    SvgImages.github,
-    SvgImages.git,
-    SvgImages.firebase,
-    SvgImages.api,
-    SvgImages.database,
+  List<Map<String, dynamic>> svgImageList = [
+    {
+      'imagePath': SvgImages.flutter,
+      'name': "Flutter",
+      "isHover": false,
+    },
+    {
+      'imagePath': SvgImages.dart,
+      'name': "Dart",
+      "isHover": false,
+    },
+    {
+      'imagePath': SvgImages.github,
+      'name': "GitHub",
+      "isHover": false,
+    },
+    {
+      'imagePath': SvgImages.git,
+      'name': "Git",
+      "isHover": false,
+    },
+    {
+      'imagePath': SvgImages.firebase,
+      'name': "Firebase",
+      "isHover": false,
+    },
+    {
+      'imagePath': SvgImages.api,
+      'name': "Rest API",
+      "isHover": false,
+    },
+    {
+      'imagePath': SvgImages.database,
+      'name': "SQF lite",
+      "isHover": false,
+    },
   ];
-  List svgImageName = [
-    "Flutter",
-    "Dart",
-    "GitHub",
-    "Git",
-    "Firebase",
-    "Rest API",
-    "SQF lite"
-  ];
-
-  List<bool> isHover = [false, false, false, false, false, false, false];
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +64,11 @@ class _SkillsPageState extends State<SkillsPage> {
             style: HeadingText.headingTextStyle(),
           ),
           const SizedBox(
-            height: 25,
+            height: 40,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height,
+            height: 600,
+            //    height: MediaQuery.of(context).size.height,
             child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -64,26 +82,50 @@ class _SkillsPageState extends State<SkillsPage> {
                 return InkWell(
                   onTap: () {},
                   onHover: (value) {
-                    isHover[index] = value;
+                    svgImageList[index]['isHover'] = value;
                     setState(() {});
                   },
                   borderRadius: BorderRadius.circular(30),
                   child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xFf0a0e21),
-                        shape: BoxShape.rectangle,
-                        border: Border.all(
-                            width: 2,
-                            color: isHover[index]
-                                ? const Color(0xFF01EEFF)
-                                : Colors.white),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
+                          color: const Color(0xFF040914),
+                          shape: BoxShape.rectangle,
+                          /*  border: Border.all(
+                              width: 2,
+                              color: isHover[index]
+                                  ? const Color(0xFF01EEFF)
+                                  : Colors.white), */
+                          borderRadius: BorderRadius.circular(30),
+                          boxShadow: svgImageList[index]['isHover']
+                              ? const [
+                                  BoxShadow(
+                                    offset: Offset(-5, -5),
+                                    color: Color(0xFFFF5F15),
+                                    blurStyle: BlurStyle.outer,
+                                  ),
+                                  BoxShadow(
+                                    offset: Offset(5, 5),
+                                    color: Color(0xFFF0FFFF),
+                                    blurStyle: BlurStyle.outer,
+                                  ),
+                                ]
+                              : const [
+                                  BoxShadow(
+                                    offset: Offset(-5, -5),
+                                    color: Color(0xFFF0FFFF),
+                                    blurStyle: BlurStyle.outer,
+                                  ),
+                                  BoxShadow(
+                                    offset: Offset(5, 5),
+                                    color: Color(0xFF3F00FF),
+                                    blurStyle: BlurStyle.outer,
+                                  ),
+                                ]),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SvgPicture.asset(
-                            svgImageList[index],
+                            svgImageList[index]['imagePath'],
                             color: Colors.white,
                             width: 100,
                             height: 100,
@@ -93,7 +135,7 @@ class _SkillsPageState extends State<SkillsPage> {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                             child: Text(
-                              svgImageName[index],
+                              svgImageList[index]['name'],
                               style: GoogleFonts.alegreya(
                                 color: Colors.white,
                                 fontSize: 20,
