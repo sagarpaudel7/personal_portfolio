@@ -31,7 +31,8 @@ class _SkillsPageState extends State<SkillsPage> {
     "SQF lite"
   ];
 
-  bool isHover = false;
+  List<bool> isHover = [false, false, false, false, false, false, false];
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -53,7 +54,7 @@ class _SkillsPageState extends State<SkillsPage> {
             child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 220,
+                maxCrossAxisExtent: 270,
                 childAspectRatio: 1.0,
                 mainAxisSpacing: 50,
                 crossAxisSpacing: 50,
@@ -63,7 +64,7 @@ class _SkillsPageState extends State<SkillsPage> {
                 return InkWell(
                   onTap: () {},
                   onHover: (value) {
-                    isHover = value;
+                    isHover[index] = value;
                     setState(() {});
                   },
                   borderRadius: BorderRadius.circular(30),
@@ -72,8 +73,8 @@ class _SkillsPageState extends State<SkillsPage> {
                         color: const Color(0xFf0a0e21),
                         shape: BoxShape.rectangle,
                         border: Border.all(
-                            width: 1.5,
-                            color: isHover
+                            width: 2,
+                            color: isHover[index]
                                 ? const Color(0xFF01EEFF)
                                 : Colors.white),
                         borderRadius: BorderRadius.circular(30),

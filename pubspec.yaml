@@ -40,6 +40,7 @@ dependencies:
   animated_text_kit: ^4.2.2
   animate_do: ^3.0.2
   flutter_svg: ^1.1.6
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

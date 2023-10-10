@@ -10,7 +10,7 @@ class Projects extends StatefulWidget {
 }
 
 class _ProjectsState extends State<Projects> {
-  bool isHover = false;
+  List<bool> isHover = [false, false, false, false];
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -42,7 +42,7 @@ class _ProjectsState extends State<Projects> {
                 return InkWell(
                   onTap: () {},
                   onHover: (value) {
-                    isHover = value;
+                    isHover[index] = value;
                     setState(() {});
                   },
                   borderRadius: BorderRadius.circular(30),
@@ -51,8 +51,8 @@ class _ProjectsState extends State<Projects> {
                         color: const Color(0xFf0a0e21),
                         shape: BoxShape.rectangle,
                         border: Border.all(
-                            width: 1.5,
-                            color: isHover
+                            width: 2,
+                            color: isHover[index]
                                 ? const Color(0xFF01EEFF)
                                 : Colors.white),
                         borderRadius: BorderRadius.circular(30),
@@ -60,12 +60,13 @@ class _ProjectsState extends State<Projects> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            height: 400,
-                            width: 400,
-                            decoration: BoxDecoration(
-                              color: Colors.deepOrange,
-                              borderRadius: BorderRadius.circular(50),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(50),
+                            child: Image.network(
+                              "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg",
+                              fit: BoxFit.contain,
+                              height: 400,
+                              width: 400,
                             ),
                           ),
                           Padding(
