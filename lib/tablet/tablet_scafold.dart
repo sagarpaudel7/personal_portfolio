@@ -6,7 +6,13 @@ class TabletScafold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrange,
+      appBar: AppBar(
+        title: Text("My portfolio"),
+      ),
+      drawer: Drawer(),
+      body: Column(
+        children: [Text("This for tablet screen")],
+      ),
     );
   }
 }

@@ -6,7 +6,13 @@ class MobileScafold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple,
+      appBar: AppBar(
+        title: Text("My portfolio"),
+      ),
+      drawer: Drawer(),
+      body: Column(children: [
+        Text("This for mobile screen"),
+      ]),
     );
   }
 }

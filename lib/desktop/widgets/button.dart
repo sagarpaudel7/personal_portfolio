@@ -1,9 +1,15 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 
 class MainButton {
   static mainButton() {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () {
+        const url =
+            "https://drive.google.com/file/d/1QXr7ois4WYMw82ftQEPqajDKvwS6gxjZ/view?usp=sharing";
+        html.window.open(url, '_blank');
+      },
       height: 40,
       minWidth: 100,
       color: Colors.blueAccent,

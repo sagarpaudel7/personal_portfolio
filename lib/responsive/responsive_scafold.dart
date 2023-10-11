@@ -14,9 +14,9 @@ class ResponsiveScafold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth < 500) {
+      if (constraints.maxWidth < 555) {
         return mobileScafold;
-      } else if (constraints.maxWidth < 1100) {
+      } else if (constraints.maxWidth < 1111) {
         return tabletScafold;
       } else {
         return desktopScafold;
