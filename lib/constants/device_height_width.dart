@@ -1,6 +1,18 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class DeviceRatio {
-  //double width = MediaQuery. of(context). size. width ;
-//double height = MediaQuery. of(context). size. height;
+class DeviceDimensions {
+  double screenWidth = 0;
+  double screenHeight = 0;
+
+  // Create a private constructor for the singleton
+  DeviceDimensions._private();
+
+  // Create a static instance of the class
+  static final DeviceDimensions instance = DeviceDimensions._private();
+
+  // Initialize the device dimensions
+  void init(BuildContext context) {
+    screenWidth = MediaQuery.of(context).size.width;
+    screenHeight = MediaQuery.of(context).size.height;
+  }
 }

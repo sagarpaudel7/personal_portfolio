@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_portfolio/constants/images.dart';
-import 'package:personal_portfolio/utils/heading_text_style.dart';
+import 'package:personal_portfolio/desktop/utils/heading_text_style.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SkillsPage extends StatefulWidget {
@@ -67,7 +67,7 @@ class _SkillsPageState extends State<SkillsPage> {
             height: 40,
           ),
           SizedBox(
-            height: 600,
+            //  height: 600,
             //    height: MediaQuery.of(context).size.height,
             child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
@@ -78,6 +78,7 @@ class _SkillsPageState extends State<SkillsPage> {
                 crossAxisSpacing: 50,
               ),
               itemCount: svgImageList.length,
+              shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(
                   onTap: () {},
@@ -96,27 +97,28 @@ class _SkillsPageState extends State<SkillsPage> {
                                   ? const Color(0xFF01EEFF)
                                   : Colors.white), */
                           borderRadius: BorderRadius.circular(30),
+                          // for neomorphic effect in skills container
                           boxShadow: svgImageList[index]['isHover']
                               ? const [
                                   BoxShadow(
-                                    offset: Offset(-5, -5),
+                                    offset: Offset(-4, -4),
                                     color: Color(0xFFFF5F15),
                                     blurStyle: BlurStyle.outer,
                                   ),
                                   BoxShadow(
-                                    offset: Offset(5, 5),
+                                    offset: Offset(4, 4),
                                     color: Color(0xFFF0FFFF),
                                     blurStyle: BlurStyle.outer,
                                   ),
                                 ]
                               : const [
                                   BoxShadow(
-                                    offset: Offset(-5, -5),
+                                    offset: Offset(-4, -4),
                                     color: Color(0xFFF0FFFF),
                                     blurStyle: BlurStyle.outer,
                                   ),
                                   BoxShadow(
-                                    offset: Offset(5, 5),
+                                    offset: Offset(4, 4),
                                     color: Color(0xFF3F00FF),
                                     blurStyle: BlurStyle.outer,
                                   ),

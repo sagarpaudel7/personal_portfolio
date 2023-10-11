@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class CircleIcon {
   static circleIcon(String assetImage, Color color) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 25, 15, 0),
+      padding: const EdgeInsets.fromLTRB(0, 15, 15, 0),
       child: ZoomIn(
         delay: const Duration(milliseconds: 300),
         child: Ink(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:personal_portfolio/utils/heading_text_style.dart';
+import 'package:personal_portfolio/desktop/utils/heading_text_style.dart';
 
 class Projects extends StatefulWidget {
   const Projects({super.key});
@@ -27,7 +27,7 @@ class _ProjectsState extends State<Projects> {
             height: 40,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 1.8,
+            //     height: MediaQuery.of(context).size.height * 1.8,
             child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -37,6 +37,7 @@ class _ProjectsState extends State<Projects> {
                 crossAxisSpacing: 50,
               ),
               itemCount: 4,
+              shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(
                   onTap: () {},
