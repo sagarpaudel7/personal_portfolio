@@ -23,10 +23,16 @@ class _DesktopScafoldState extends State<DesktopScafold> {
               NavBar(),
               TopContainer(),
               SizedBox(
-                height: 170,
+                height: 130,
               ),
               SkillsPage(),
+              SizedBox(
+                height: 100,
+              ),
               Projects(),
+              SizedBox(
+                height: 100,
+              ),
             ],
           ),
         ),

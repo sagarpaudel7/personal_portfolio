@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Personal Portfolio',
       theme: ThemeData(
         brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
+        //  primarySwatch: Colors.blue,
       ),
       home: const ResponsiveScafold(
         mobileScafold: MobileScafold(),

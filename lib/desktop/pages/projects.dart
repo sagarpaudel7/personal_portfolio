@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_portfolio/desktop/utils/heading_text_style.dart';
+import 'package:personal_portfolio/desktop/utils/project_text_style.dart';
+import 'package:personal_portfolio/desktop/widgets/project_chip.dart';
 
 class Projects extends StatefulWidget {
   const Projects({super.key});
@@ -10,12 +11,18 @@ class Projects extends StatefulWidget {
 }
 
 class _ProjectsState extends State<Projects> {
-  List<bool> isHover = [false, false, false, false];
+  List<Map<String, dynamic>> project = [
+    {
+      "hover": false,
+      "proname": "CHOICE : An ecommerce App",
+      "proimage": "assets/images/projects/choice.png",
+    }
+  ];
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 120,
+      padding: EdgeInsets.symmetric(
+        horizontal: MediaQuery.of(context).size.width * 0.10,
       ),
       child: Column(
         children: [
@@ -26,65 +33,86 @@ class _ProjectsState extends State<Projects> {
           const SizedBox(
             height: 40,
           ),
-          SizedBox(
-            //     height: MediaQuery.of(context).size.height * 1.8,
-            child: GridView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 600,
-                childAspectRatio: 1.0,
-                mainAxisSpacing: 50,
-                crossAxisSpacing: 50,
-              ),
-              itemCount: 4,
-              shrinkWrap: true,
-              itemBuilder: (BuildContext context, int index) {
-                return InkWell(
-                  onTap: () {},
-                  onHover: (value) {
-                    isHover[index] = value;
-                    setState(() {});
-                  },
-                  borderRadius: BorderRadius.circular(30),
-                  child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xFf0a0e21),
-                        shape: BoxShape.rectangle,
-                        border: Border.all(
-                            width: 2,
-                            color: isHover[index]
-                                ? const Color(0xFF01EEFF)
-                                : Colors.white),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(50),
-                            child: Image.network(
-                              "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg",
-                              fit: BoxFit.contain,
-                              height: 400,
-                              width: 400,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                            child: Text(
-                              "This is my project ${index + 1}",
-                              style: GoogleFonts.alegreya(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          )
-                        ],
-                      )),
-                );
-              },
+          GridView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 1,
+              childAspectRatio: 16 / 9,
+              mainAxisSpacing: 50,
+              crossAxisSpacing: 50,
             ),
+            itemCount: project.length,
+            shrinkWrap: true,
+            itemBuilder: (BuildContext context, int index) {
+              return InkWell(
+                onTap: () {},
+                onHover: (value) {
+                  project[index]["hover"] = value;
+                  setState(() {});
+                },
+                borderRadius: BorderRadius.circular(30),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: const Color(0xFf0a0e21),
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: project[index]["hover"]
+                          ? const [
+                              BoxShadow(
+                                offset: Offset(-3, -3),
+                                color: Color(0xFFFF5F15),
+                                blurStyle: BlurStyle.outer,
+                              ),
+                              BoxShadow(
+                                offset: Offset(3, 3),
+                                color: Color(0xFFF0FFFF),
+                                blurStyle: BlurStyle.outer,
+                              ),
+                            ]
+                          : const [
+                              BoxShadow(
+                                offset: Offset(-3, -3),
+                                color: Color(0xFFF0FFFF),
+                                blurStyle: BlurStyle.outer,
+                              ),
+                              BoxShadow(
+                                offset: Offset(3, 3),
+                                color: Color(0xFF3F00FF),
+                                blurStyle: BlurStyle.outer,
+                              ),
+                            ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          project[index]["proname"],
+                          style: ProjectText.projectText(context),
+                        ),
+                        Row(
+                          children: [
+                            ProjectChip.projectChip(context, "Dart"),
+                            ProjectChip.projectChip(context, "Flutter"),
+                            ProjectChip.projectChip(context, "Firebase"),
+                            ProjectChip.projectChip(context, "Android"),
+                            ProjectChip.projectChip(context, "Ios"),
+                          ],
+                        ),
+                        AspectRatio(
+                          aspectRatio: 9 / 4,
+                          child: Image.asset(
+                            project[index]["proimage"],
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),
