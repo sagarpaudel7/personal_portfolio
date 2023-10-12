@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/desktop/pages/desktop_scafold.dart';
 import 'package:personal_portfolio/mobile/mobile_scafold.dart';
 import 'package:personal_portfolio/responsive/responsive_scafold.dart';
-import 'package:personal_portfolio/tablet/tablet_scafold.dart';
+import 'package:personal_portfolio/tablet/tablet_pages/tablet_scafold.dart';
 
 void main() {
   runApp(const MyApp());
