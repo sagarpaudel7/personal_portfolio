@@ -68,7 +68,7 @@ class _SkillsPageState extends State<SkillsPage> {
           GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 270,
+              maxCrossAxisExtent: 250,
               childAspectRatio: 1.0,
               mainAxisSpacing: 50,
               crossAxisSpacing: 50,
