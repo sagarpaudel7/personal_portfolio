@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/tablet/tablet_utils/theading_text_style.dart';
-import 'package:personal_portfolio/tablet/tablet_utils/tproject_text_style.dart';
-import 'package:personal_portfolio/tablet/tablet_widgets/tproject_chip.dart';
+import 'package:personal_portfolio/mobile/mobile_utils/theading_text_style.dart';
+import 'package:personal_portfolio/mobile/mobile_utils/tproject_text_style.dart';
+import 'package:personal_portfolio/mobile/mobile_widgets/tproject_chip.dart';
 
 class TabletProjects extends StatefulWidget {
   const TabletProjects({super.key});
@@ -38,7 +38,7 @@ class _TabletProjectsState extends State<TabletProjects> {
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 1,
-              childAspectRatio: 4 / 3,
+              childAspectRatio: 3 / 3,
               mainAxisSpacing: 50,
               crossAxisSpacing: 50,
             ),
@@ -102,7 +102,7 @@ class _TabletProjectsState extends State<TabletProjects> {
                           ],
                         ),
                         AspectRatio(
-                          aspectRatio: w > 1000 ? 9 / 5.3 : 10 / 5.9,
+                          aspectRatio: 8 / 6,
                           child: Image.asset(
                             project[index]["proimage"],
                             fit: BoxFit.fill,

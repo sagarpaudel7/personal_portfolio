@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/constants/icons.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:personal_portfolio/tablet/tablet_utils/ttop_container_text_style.dart';
-import 'package:personal_portfolio/tablet/tablet_widgets/tbutton.dart';
-import 'package:personal_portfolio/tablet/tablet_widgets/tcircle_avatar_icon.dart';
-import 'package:personal_portfolio/tablet/tablet_widgets/tprofile_circle.dart';
+import 'package:personal_portfolio/mobile/mobile_utils/ttop_container_text_style.dart';
+import 'package:personal_portfolio/mobile/mobile_widgets/tbutton.dart';
+import 'package:personal_portfolio/mobile/mobile_widgets/tcircle_avatar_icon.dart';
+import 'package:personal_portfolio/mobile/mobile_widgets/tprofile_circle.dart';
 
 class TopContainer extends StatefulWidget {
   const TopContainer({super.key});

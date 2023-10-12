@@ -50,7 +50,7 @@ class DiffText {
           blurRadius: 1.7,
         )
       ],
-      fontSize: MediaQuery.of(context).size.width * 0.035,
+      fontSize: MediaQuery.of(context).size.width * 0.050,
       fontWeight: FontWeight.bold,
     );
   }
@@ -60,7 +60,7 @@ class DiffText {
 
 class ChangableText {
   static AnimatedTextKit changableText(
-      context, String text1, text2, text3, text4) {
+      BuildContext context, String text1, text2, text3, text4) {
     return AnimatedTextKit(
       animatedTexts: [
         TypewriterAnimatedText(

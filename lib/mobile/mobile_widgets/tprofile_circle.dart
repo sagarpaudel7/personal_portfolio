@@ -8,8 +8,8 @@ class TabletCircle {
       child: Padding(
         padding: const EdgeInsets.only(top: 20),
         child: Ink(
-          width: MediaQuery.of(context).size.width * .65,
-          height: MediaQuery.of(context).size.width * .65,
+          width: MediaQuery.of(context).size.width * .90,
+          height: MediaQuery.of(context).size.width * .90,
           decoration: BoxDecoration(
             border: Border.all(
               color: const Color(0xFFff5f15).withOpacity(0.25),

@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:personal_portfolio/tablet/tablet_pages/tablet_about.dart';
-import 'package:personal_portfolio/tablet/tablet_pages/tablet_contact.dart';
-import 'package:personal_portfolio/tablet/tablet_pages/tablet_projects.dart';
-import 'package:personal_portfolio/tablet/tablet_pages/tablet_skills.dart';
-import 'package:personal_portfolio/tablet/tablet_widgets/tnavbar.dart';
-import 'package:personal_portfolio/tablet/tablet_widgets/ttop_container.dart';
+import 'package:personal_portfolio/mobile/mobile_pages/mobile_about.dart';
+import 'package:personal_portfolio/mobile/mobile_pages/mobile_contact.dart';
+import 'package:personal_portfolio/mobile/mobile_pages/mobile_projects.dart';
+import 'package:personal_portfolio/mobile/mobile_pages/mobile_skills.dart';
+import 'package:personal_portfolio/mobile/mobile_widgets/tnavbar.dart';
+import 'package:personal_portfolio/mobile/mobile_widgets/ttop_container.dart';
 
-class TabletScafold extends StatefulWidget {
-  const TabletScafold({super.key});
+class MobileScafold extends StatefulWidget {
+  const MobileScafold({super.key});
 
   @override
-  State<TabletScafold> createState() => _TabletScafoldState();
+  State<MobileScafold> createState() => _MobileScafoldState();
 }
 
-class _TabletScafoldState extends State<TabletScafold> {
+class _MobileScafoldState extends State<MobileScafold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF040914),
-//appbar for tablet mode
+//appbar for mobile mode
       appBar: AppBar(
         backgroundColor: Colors.grey.withOpacity(0.20),
         leading: const NavBar(),
         leadingWidth: 200,
       ),
-//for drawer in tablet mode
+//for drawer in mobile mode
       endDrawer: Drawer(
-        width: 250,
+        width: 270,
         child: ListView(
           children: [
             SizedBox(
