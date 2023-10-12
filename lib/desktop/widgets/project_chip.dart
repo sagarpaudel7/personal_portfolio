@@ -14,6 +14,7 @@ class ProjectChip {
             fontWeight: FontWeight.bold,
           ),
         ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         elevation: 3,
         backgroundColor: const Color(0xFF00FFFF),
         shadowColor: const Color(0xFFF0FFFF),

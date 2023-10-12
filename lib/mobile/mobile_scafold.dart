@@ -7,10 +7,10 @@ class MobileScafold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My portfolio"),
+        title: const Text("My portfolio"),
       ),
-      drawer: Drawer(),
-      body: Column(children: [
+      drawer: const Drawer(),
+      body: Column(children: const [
         Text("This for mobile screen"),
       ]),
     );

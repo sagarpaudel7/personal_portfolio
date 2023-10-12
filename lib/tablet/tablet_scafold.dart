@@ -7,11 +7,11 @@ class TabletScafold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My portfolio"),
+        title: const Text("My portfolio"),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: Column(
-        children: [Text("This for tablet screen")],
+        children: const [Text("This for tablet screen")],
       ),
     );
   }

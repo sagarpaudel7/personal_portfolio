@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/desktop/pages/about.dart';
 import 'package:personal_portfolio/desktop/pages/projects.dart';
 import 'package:personal_portfolio/desktop/pages/skills.dart';
 import 'package:personal_portfolio/desktop/widgets/navbar.dart';
@@ -30,6 +31,10 @@ class _DesktopScafoldState extends State<DesktopScafold> {
                 height: 100,
               ),
               Projects(),
+              SizedBox(
+                height: 80,
+              ),
+              AboutPage(),
               SizedBox(
                 height: 100,
               ),
