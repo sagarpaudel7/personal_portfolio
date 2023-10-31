@@ -41,7 +41,9 @@ class LinkButton {
             ),
             Text(
               name,
-              style: const TextStyle(fontSize: 16),
+              style: TextStyle(
+                fontSize: MediaQuery.of(context).size.width * .040,
+              ),
             ),
           ],
         ),

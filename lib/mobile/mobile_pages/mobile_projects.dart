@@ -20,7 +20,6 @@ class _TabletProjectsState extends State<TabletProjects> {
   ];
   @override
   Widget build(BuildContext context) {
-    var w = MediaQuery.of(context).size.width;
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: MediaQuery.of(context).size.width * 0.10,
@@ -92,7 +91,8 @@ class _TabletProjectsState extends State<TabletProjects> {
                           project[index]["proname"],
                           style: ProjectText.projectText(context),
                         ),
-                        Row(
+                        Wrap(
+                          runSpacing: 0.0010,
                           children: [
                             ProjectChip.projectChip(context, "Dart"),
                             ProjectChip.projectChip(context, "Flutter"),
@@ -102,10 +102,10 @@ class _TabletProjectsState extends State<TabletProjects> {
                           ],
                         ),
                         AspectRatio(
-                          aspectRatio: 8 / 6,
+                          aspectRatio: 7 / 4,
                           child: Image.asset(
                             project[index]["proimage"],
-                            fit: BoxFit.fill,
+                            fit: BoxFit.fitWidth,
                           ),
                         ),
                       ],

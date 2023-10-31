@@ -10,11 +10,11 @@ class ProjectChip {
           "# $chipname",
           style: GoogleFonts.alegreya(
             color: const Color(0xFF000000),
-            fontSize: MediaQuery.of(context).size.width * 0.020,
+            fontSize: MediaQuery.of(context).size.width * 0.030,
             fontWeight: FontWeight.bold,
           ),
         ),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
         elevation: 3,
         backgroundColor: const Color(0xFF00FFFF),
         shadowColor: const Color(0xFFF0FFFF),

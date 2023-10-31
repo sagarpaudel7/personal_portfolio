@@ -46,7 +46,7 @@ class TabletAboutPage extends StatelessWidget {
                   ),
                   Text(
                     "Hello, I'm Sagar Paudel, representing Nepal. With a solid knowledge of application development, particularly with Flutter, I'm on a journey of knowledge and innovation, seeking connections with fellow developers and industry professionals.\nI'm looking to collaborate and embark on an exciting path of growth and technology advancement together, driven by my passion for app development technology. I invite you to explore my portfolio and join me in shaping the future of tech through collaboration, learning, and innovation.",
-                    textAlign: TextAlign.justify,
+                    textAlign: TextAlign.left,
                     softWrap: true,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 12,

@@ -13,18 +13,18 @@ class AboutChip {
               avatar: Icon(
                 icon,
                 color: iconcolor,
-                size: MediaQuery.of(context).size.width * 0.018,
+                size: MediaQuery.of(context).size.width * 0.050,
               ),
               label: Text(
                 chipname,
                 style: GoogleFonts.alegreya(
                   color: const Color(0xFFF0FFFF),
-                  fontSize: MediaQuery.of(context).size.width * 0.015,
+                  fontSize: MediaQuery.of(context).size.width * 0.035,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50)),
+                  borderRadius: BorderRadius.circular(25)),
               elevation: 3,
               backgroundColor: Colors.grey.withOpacity(0.0),
               shadowColor: const Color(0xFFF0FFFF),
@@ -37,7 +37,7 @@ class AboutChip {
                 desc,
                 style: GoogleFonts.karla(
                   color: const Color(0xFFF0FFFF),
-                  fontSize: MediaQuery.of(context).size.width * 0.018,
+                  fontSize: MediaQuery.of(context).size.width * 0.025,
                   fontWeight: FontWeight.w500,
                 ),
               ),

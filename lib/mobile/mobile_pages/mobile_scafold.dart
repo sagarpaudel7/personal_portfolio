@@ -30,12 +30,12 @@ class _MobileScafoldState extends State<MobileScafold> {
         width: 270,
         child: ListView(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 200,
               child: DrawerHeader(
-                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+                  padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
                   child: Column(
-                    children: const [
+                    children: [
                       CircleAvatar(
                         backgroundImage:
                             AssetImage("assets/images/profile.png"),
@@ -64,10 +64,10 @@ class _MobileScafoldState extends State<MobileScafold> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Center(
           child: Column(
-            children: const [
+            children: [
               SizedBox(
                 height: 7,
               ),
