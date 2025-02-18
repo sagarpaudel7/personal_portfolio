@@ -14,10 +14,23 @@ class _ProjectsState extends State<Projects> {
   List<Map<String, dynamic>> project = [
     {
       "hover": false,
+      "proname": "SEO Specialist : Vik-rakennus",
+      "proimage": "assets/images/projects/seo_specialist.jpg",
+      "tech": [
+        "SEO",
+        "Google Analytics",
+        "Keyword Research",
+        "Content Strategy"
+      ]
+    },
+    {
+      "hover": false,
       "proname": "CHOICE : An ecommerce App",
       "proimage": "assets/images/projects/choice.png",
-    }
+      "tech": ["Dart", "Flutter", "Firebase", "Android", "iOS"]
+    },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,7 +40,7 @@ class _ProjectsState extends State<Projects> {
       child: Column(
         children: [
           Text(
-            "Projects",
+            "Projects/Experiences",
             style: HeadingText.headingTextStyle(),
           ),
           const SizedBox(
@@ -47,8 +60,9 @@ class _ProjectsState extends State<Projects> {
               return InkWell(
                 onTap: () {},
                 onHover: (value) {
-                  project[index]["hover"] = value;
-                  setState(() {});
+                  setState(() {
+                    project[index]["hover"] = value;
+                  });
                 },
                 borderRadius: BorderRadius.circular(30),
                 child: Container(
@@ -91,15 +105,16 @@ class _ProjectsState extends State<Projects> {
                           project[index]["proname"],
                           style: ProjectText.projectText(context),
                         ),
-                        Row(
-                          children: [
-                            ProjectChip.projectChip(context, "Dart"),
-                            ProjectChip.projectChip(context, "Flutter"),
-                            ProjectChip.projectChip(context, "Firebase"),
-                            ProjectChip.projectChip(context, "Android"),
-                            ProjectChip.projectChip(context, "Ios"),
-                          ],
+                        Wrap(
+                          spacing: 8.0,
+                          children: List<Widget>.from(
+                            (project[index]["tech"] as List<dynamic>).map(
+                              (tech) => ProjectChip.projectChip(
+                                  context, tech.toString()),
+                            ),
+                          ),
                         ),
+                        const SizedBox(height: 10),
                         AspectRatio(
                           aspectRatio: 9 / 4,
                           child: Image.asset(

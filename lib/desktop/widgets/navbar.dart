@@ -21,10 +21,6 @@ class _NavBarState extends State<NavBar> {
           Row(
             children: [
               navButton("Home"),
-              navButton("Skill"),
-              navButton("Project"),
-              navButton("About"),
-              navButton("Contact"),
             ],
           )
         ],
