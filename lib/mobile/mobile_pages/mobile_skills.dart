@@ -14,13 +14,18 @@ class TabletSkillsPage extends StatefulWidget {
 class _TabletSkillsPageState extends State<TabletSkillsPage> {
   List<Map<String, dynamic>> svgImageList = [
     {
-      'imagePath': SvgImages.flutter,
-      'name': "Flutter",
+      'imagePath': SvgImages.seo,
+      'name': "SEO Specialist",
       "isHover": false,
     },
     {
-      'imagePath': SvgImages.dart,
-      'name': "Dart",
+      'imagePath': SvgImages.wordpress,
+      'name': "Wordpress",
+      "isHover": false,
+    },
+    {
+      'imagePath': SvgImages.flutter,
+      'name': "Flutter",
       "isHover": false,
     },
     {
@@ -29,23 +34,8 @@ class _TabletSkillsPageState extends State<TabletSkillsPage> {
       "isHover": false,
     },
     {
-      'imagePath': SvgImages.git,
-      'name': "Git",
-      "isHover": false,
-    },
-    {
       'imagePath': SvgImages.firebase,
       'name': "Firebase",
-      "isHover": false,
-    },
-    {
-      'imagePath': SvgImages.api,
-      'name': "Rest API",
-      "isHover": false,
-    },
-    {
-      'imagePath': SvgImages.database,
-      'name': "SQF lite",
       "isHover": false,
     },
   ];

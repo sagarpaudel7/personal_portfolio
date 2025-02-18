@@ -55,10 +55,10 @@ class _TopContainerState extends State<TopContainer> {
                         style: NormalSubTetx.normalSubTetx(),
                       ),
                       ChangableText.changableText(
+                        "SEO Specialist",
+                        "Wordpress Manager",
+                        "SEO Content Specialist",
                         "Flutter App Developer",
-                        "Figma to App Converter",
-                        "Freelancer",
-                        "BCA Student",
                       ),
                     ],
                   ),

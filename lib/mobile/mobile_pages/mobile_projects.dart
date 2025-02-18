@@ -14,10 +14,23 @@ class _TabletProjectsState extends State<TabletProjects> {
   List<Map<String, dynamic>> project = [
     {
       "hover": false,
+      "proname": "SEO Specialist : Vik-rakennus",
+      "proimage": "assets/images/projects/seo_specialist.jpg",
+      "tech": [
+        "SEO",
+        "Google Analytics",
+        "Keyword Research",
+        "Content Strategy"
+      ]
+    },
+    {
+      "hover": false,
       "proname": "CHOICE : An ecommerce App",
       "proimage": "assets/images/projects/choice.png",
-    }
+      "tech": ["Dart", "Flutter", "Firebase", "Android", "iOS"]
+    },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -92,14 +105,13 @@ class _TabletProjectsState extends State<TabletProjects> {
                           style: ProjectText.projectText(context),
                         ),
                         Wrap(
-                          runSpacing: 0.0010,
-                          children: [
-                            ProjectChip.projectChip(context, "Dart"),
-                            ProjectChip.projectChip(context, "Flutter"),
-                            ProjectChip.projectChip(context, "Firebase"),
-                            ProjectChip.projectChip(context, "Android"),
-                            ProjectChip.projectChip(context, "Ios"),
-                          ],
+                          spacing: 8.0,
+                          children: List<Widget>.from(
+                            (project[index]["tech"] as List<dynamic>).map(
+                              (tech) => ProjectChip.projectChip(
+                                  context, tech.toString()),
+                            ),
+                          ),
                         ),
                         AspectRatio(
                           aspectRatio: 7 / 4,

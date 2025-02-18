@@ -55,10 +55,6 @@ class _MobileScafoldState extends State<MobileScafold> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 navButton("Home"),
-                navButton("Skill"),
-                navButton("Project"),
-                navButton("About"),
-                navButton("Contact"),
               ],
             ),
           ],

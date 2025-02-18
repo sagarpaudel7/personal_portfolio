@@ -55,10 +55,6 @@ class _TabletScafoldState extends State<TabletScafold> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 navButton("Home"),
-                navButton("Skill"),
-                navButton("Project"),
-                navButton("About"),
-                navButton("Contact"),
               ],
             ),
           ],

@@ -59,7 +59,7 @@ class AboutPage extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          "Hello, I'm Sagar Paudel, representing Nepal. With a solid knowledge of application development, particularly with Flutter, I'm on a journey of knowledge and innovation, seeking connections with fellow developers and industry professionals.\nI'm looking to collaborate and embark on an exciting path of growth and technology advancement together, driven by my passion for app development technology. I invite you to explore my portfolio and join me in shaping the future of tech through collaboration, learning, and innovation.",
+                          "Hello, I'm Sagar Paudel – A dedicated SEO Specialist who turns data into organic growth. I specialize in keyword research, technical SEO audits, link auditing, on-page and off-page optimization, competitor analysis, and WordPress management. I leverage tools like Ahrefs, Semrush, Screaming Frog, Google Analytics 4, and Google Search Console to drive measurable results. Additionally, I bring experience in Flutter mobile app development, blending technical expertise with creative innovation.",
                           textAlign: TextAlign.justify,
                           softWrap: true,
                           overflow: TextOverflow.ellipsis,
@@ -81,7 +81,7 @@ class AboutPage extends StatelessWidget {
                             Icons.filter_center_focus,
                             Colors.redAccent,
                             "Status",
-                            "Focusing on learn Flutter"),
+                            "Focusing on learn SEO"),
                       ],
                     ),
                   ),
