@@ -81,7 +81,7 @@ class TabletAboutPage extends StatelessWidget {
                             Icons.filter_center_focus,
                             Colors.redAccent,
                             "Status",
-                            "Focusing on learn SEO"),
+                            "Focusing on learn Flutter + QA"),
                       ],
                     ),
                   ),
