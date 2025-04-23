@@ -56,10 +56,10 @@ class _TopContainerState extends State<TopContainer> {
                 delay: const Duration(milliseconds: 300),
                 child: ChangableText.changableText(
                   context,
-                  "SEO Specialist",
-                  "Wordpress Manager",
-                  "SEO Content Specialist",
                   "Flutter App Developer",
+                  "Wordpress Manager",
+                  "Quality Assurance",
+                  "Firebase/API Spec.",
                 ),
               ),
               //======== for circle icons ==================

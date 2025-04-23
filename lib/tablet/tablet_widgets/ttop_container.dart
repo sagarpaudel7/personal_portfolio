@@ -59,7 +59,7 @@ class _TopContainerState extends State<TopContainer> {
                   "Flutter App Developer",
                   "Wordpress Manager",
                   "Quality Assurance",
-                  "SEO Specialist",
+                  "Firebase/API Spec.",
                 ),
               ),
               //======== for circle icons ==================
