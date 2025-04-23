@@ -45,7 +45,7 @@ class TabletAboutPage extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "Hello, I'm Sagar Paudel – A dedicated SEO Specialist who turns data into organic growth. I specialize in keyword research, technical SEO audits, link auditing, on-page and off-page optimization, competitor analysis, and WordPress management. I leverage tools like Ahrefs, Semrush, Screaming Frog, Google Analytics 4, and Google Search Console to drive measurable results. Additionally, I bring experience in Flutter mobile app development, blending technical expertise with creative innovation.",
+                    "Hello, I'm Sagar Paudel – A passionate Flutter developer who transforms ideas into real-world cross-platform mobile apps. I specialize in creating clean UIs, integrating REST APIs, and managing real-time data with Firebase. Alongside development, I also focus on Manual Quality Assurance to ensure app stability, usability, and performance. My approach blends technical precision with user-first design to deliver reliable and engaging app experiences.",
                     textAlign: TextAlign.left,
                     softWrap: true,
                     overflow: TextOverflow.ellipsis,
